@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WonderTour</title>
+        <link href="dist/hamburgers.css" rel="stylesheet">
+        <link href="css/output.css" rel="stylesheet">
+        <link href="css/my.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body class="font-['Montserrat']">
+        <header>
+            <a href="https://www.templatemonster.com/intense-multipurpose-html-template.html" id="banner" target="_blank" class="hidden mobil:block">
+                <img src="img/intense_02.jpg" alt="">
+            </a>
+            <nav>
+                <div id="nav-desk" class="desktop:block hidden">
+                    <div id="nav-top" class=" bg-white flex items-center justify-between py-5 container m-auto">
+                        <a href="index.htm"><img class="max-w-[240px]" src="img/logo-default-450x37.png" alt="WonderTour-Logo"></a>
+                        <div class="flex gap-10">
+                            <div class="clock flex items-center gap-6">
+                                <i class="fa-regular fa-clock text-[24px] text-[#01b3a7]"></i>
+                                <p class="tracking-wider text-[16px]">09:00 AM — 05:00 PM</p>
+                            </div>
+                            <div class="phone flex items-center gap-6">
+                                <i class="fa-solid fa-phone text-[24px] text-[#01b3a7]"></i>
+                                <a href="tel:+13239134688" class="tracking-wider text-[16px] hover:text-[#50ba87]">+1 323-913-4688</a>
+                            </div>
+                            <button class="tracking-wider text-[16px] button">Get a Free Quote</button>
+                        </div>
+                    </div>
+                    <div id="nav-bottom" class="text-[#fff] sticky top-0" style="background: #162e44;">
+                        <div class="container m-auto flex justify-between items-center">
+                            <ul class="flex gap-8 font-bold text-[17px]">
+                                <li class="tracking-widest hover:bg-slate-600 border-t-4 border-[#162e44] hover:border-[#01b3a7] trs p-5">
+                                    <a href="../index.htm">Home</a>
+                                </li>
+                                <li class="tracking-widest hover:bg-slate-600 border-t-4 border-[#162e44] hover:border-[#01b3a7] trs p-5">
+                                    <a href="about.htm">About</a>
+                                </li>
+                                <li class="bg-slate-600 tracking-widest border-t-4 border-[#01b3a7] trs p-5">
+                                    <a href="typography.htm">Typography</a>
+                                </li>
+                                <li class="tracking-widest hover:bg-slate-600 border-t-4 border-[#162e44] hover:border-[#01b3a7] trs p-5">
+                                    <a href="contact.htm">Contact Us</a>
+                                </li>
+                            </ul>
+                            <div class="b-top flex gap-5 text-[20px]">
+                                <a href="" class="fa-brands fa-facebook-f hover:text-[#50ba87]"></a>
+                                <a href="" class="fa-brands fa-twitter hover:text-[#50ba87]"></a>
+                                <a href="" class="fa-brands fa-google-plus-g hover:text-[#50ba87]"></a>
+                                <a href="" class="fa-brands fa-instagram hover:text-[#50ba87]"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="nav-mobil" class="flex laptop:hidden py-6 px-4 bg-white container m-auto items-center justify-between">
+                    <div class="flex items-center">
+                        <div class="bars" onclick="openBurger()">
+                            <div class="hamburger hamburger--arrowturn" tabindex="0"
+                                aria-label="Menu" role="button" aria-controls="navigation">
+                                <div class="hamburger-box">
+                                    <div class="hamburger-inner"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="index.htm"><img class="w-[240px] px-5" src="img/logo-default-450x37.png" alt="WonderTour-Logo"></a>
+                    </div>
+                    <i onclick="openDropdown()" class="fa-solid fa-ellipsis-vertical text-[30px]"></i>
+                </div>
+            </nav>
+        </header>
+        <div class="dropdown w-[250px] hidden absolute z-[999] right-0">
+            <div class="flex gap-4 flex-col p-5 bg-white">
+                <div class="clock flex items-center gap-4">
+                    <i class="fa-regular fa-clock text-[20px] text-[#01b3a7]"></i>
+                    <p class="tracking-wider text-[14px]">09:00 AM — 05:00 PM</p>
+                </div>
+                <div class="phone flex items-center gap-4">
+                    <i class="fa-solid fa-phone text-[20px] text-[#01b3a7]"></i>
+                    <a href="tel:+13239134688" class="tracking-wider text-[14px] hover:text-[#50ba87]">+1 323-913-4688</a>
+                </div>
+                <button class="tracking-wider text-[14px] button">Get a Free Quote</button>
+            </div>
+        </div>
+        <div class="burgermenu w-[75%] h-[100vh] fixed left-0 z-[9999999] translate-x-[-150%] bg-white">
+            <div class="b-top flex gap-5 text-[18px] border-b-2 py-6 justify-center">
+                <a href="" class="fa-brands fa-facebook-f"></a>
+                <a href="" class="fa-brands fa-twitter"></a>
+                <a href="" class="fa-brands fa-google-plus-g"></a>
+                <a href="" class="fa-brands fa-instagram"></a>
+            </div>
+            <ul class="mt-4">
+                <li class="p-5 active:bg-[#01b3a7] active:text-[#fff]"><a href="../index.htm">Home</a></li>
+                <li class="p-5 active:bg-[#01b3a7] active:text-[#fff]"><a href="about.htm">About</a></li>
+                <li class="p-5 bg-[#01b3a7] text-[#fff]"><a href="typography.htm">Typography</a></li>
+                <li class="p-5 active:bg-[#01b3a7] active:text-[#fff]"><a href="contact.htm">Contact us</a></li>
+            </ul>
+        </div>
+        <main>
+            <div style="background: url('../img/breadcrumbs-bg.jpg')center/cover;" class="mobil:h-[50vh] h-[30vh] overflow-hidden relative">
+                <div style="background: url('../img/breadcrumbs-bg.jpg')center/cover;" class="h-[60vh]" id="box-position"></div>
+                <div class="text-center absolute z-10 top-[30%] mobil:left-[40%] left-[25%]">
+                    <h2 class="text-white mobil:text-[3em] text-[2em] font-bold py-4">Typography</h2>
+                    <h4 class="text-white"><a href="index.htm" >HOME </a> / TYPOGRAPHY</h4>
+                </div>
+            </div>
+            <div class="container m-auto">
+                <div class="flex justify-between py-8 px-4">
+                    <div>
+                        <div class="py-5">
+                            <h1 class="mobil:text-[4em] text-[2.3em]">H1 Heading</h1>
+                            <p class="mobil:text-base text-sm">Welcome to our wonderful world. We sincerely hope that each and every user entering our <br> website will find exactly what he/she is looking for. With advanced features of activating <br> account and new login widgets, you will definitely have a great experience of using our web <br> page.</p>
+                        </div>
+                        <div class="py-4">
+                            <h2 class="mobil:text-[3em] text-[1.8em] font-bold">H2 Heading</h2>
+                            <p class="mobil:text-base text-sm">Welcome to our wonderful world. We sincerely hope that each and every user entering our <br> website will find exactly what he/she is looking for. With advanced features of activating <br> account and new login widgets, you will definitely have a great experience of using our web <br> page.</p>
+                        </div>
+                        <div class="py-4">
+                            <h3 class="mobil:text-[2.3em] text-[1.4em] font-bold pb-3">H3 Heading</h3>
+                            <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our <br> website will find exactly what he/she is looking for. With advanced features of activating <br> account and new login widgets, you will definitely have a great experience of using our web <br> page.</p>
+                        </div>
+                        <div class="py-4">
+                            <h4 class="mobil:text-[2em] text-[1.3em] font-bold pb-4">H4 Heading</h4>
+                            <p class="mobil:text-base text-sm">Welcome to our wonderful world. We sincerely hope that each and every user entering our <br> website will find exactly what he/she is looking for. With advanced features of activating <br> account and new login widgets, you will definitely have a great experience of using our web <br> page.</p>
+                        </div>
+                        <div class="py-4">
+                            <h5 class="mobil:text-[1.6em] text-[1.2em] pb-5 font-semibold">H5 Heading</h5>
+                            <p>Welcome to our wonderful world. We sincerely hope that each and every user entering our <br> website will find exactly what he/she is looking for. With advanced features of activating <br> account and new login widgets, you will definitely have a great experience of using our web <br> page.</p>
+                        </div>
+                        <div class="py-4">
+                            <h6 class="mobil:text-[1.4em] text[1.1em] pb-5 font-semibold">H6 Heading</h6>
+                            <p class="mobil:text-base text-sm">Welcome to our wonderful world. We sincerely hope that each and every user entering our <br> website will find exactly what he/she is looking for. With advanced features of activating <br> account and new login widgets, you will definitely have a great experience of using our web <br> page.</p>
+                        </div>
+                    </div>
+                    <div class="ml-5 hidden mobil:block">
+                        <h1 class="text-[3.5em]">H1 Heading</h1>
+                        <h2 class="text-[2.7em] font-bold">H2 Heading</h2>
+                        <h3 class="text-[2.2em] font-bold">H3 Heading</h3>
+                        <h4 class="text-[1.8em]">H4 Heading</h4>
+                        <h5 class="text-[1.4em]">H5 Heading</h5>
+                        <h6 class="text-[1.2em]">H6 Heading</h6>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <h2 class="font-bold mobil:text-[2.3em] text-[1.8em] py-4">HTML Text Elements</h2>
+                    <p>Welcome to our wonderful world. This is a bold text <mark class="bg-black text-white">This is a highlighted text</mark> We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login <span class="text-gray-300">Tooltips</span> widgets, you will definitely have a great experience of using our web page. 
+                        <span class="line-through">This is a strikethrough text</span> <span class="underline">This is an underlined text</span>. <a href="" class="text-[#01b3a7]">Link</a> Hover link Press <a href="" class="text-[#01b3a7]">link</a></p>
+                </div> <br>
+                <div class="flex justify-between py-8 px-4 mobil:flex-row flex-col">
+                    <div>
+                        <h2 class="font-bold mobil:text-[2.3em] text-[1.6em] py-4">Ordered & Unordered Lists</h2>
+                        <div class="flex justify-between py-6">
+                            <ul class="flex flex-col gap-4" id="typ-list">
+                                <li>Consulting</li>
+                                <li>Customer Service</li>
+                                <li>Innovation</li>
+                                <li>Management</li>
+                                <li>Ethics</li>
+                            </ul>
+                            <ol class="list-decimal flex flex-col gap-4">
+                                <li>Consulting</li>
+                                <li>Customer Service</li>
+                                <li>Innovation</li>
+                                <li>Management</li>
+                                <li>Ethics</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="font-bold mobil:text-[2.3em] text-[1.6em] py-4">Blockquote</h2>
+                        <div class="flex mobil:flex-row flex-col gap-3">
+                            <i class="fa-solid fa-quote-left text-[#01b3a7] text-[2.5em] mt-[5px]"></i>
+                            <div>
+                                <p class="mobil:text-[1.5em] text-[1.2em]">We use only trusted, verified <br> content, so you can believe our every <br> word.</p>
+                                <p class="text-[#50ba87] text-[1.2em] py-4">Catherine Williams</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="https://www.templatemonster.com/intense-multipurpose-html-template.html" id="banner" target="_blank">
+                <img src="img/intense_big_02 (1).jpg" class="max-w-full" alt="banner">
+            </a>
+        </main>
+        <footer>
+            <div class="footer-top bg-[#162D43] py-8">
+                <div class="container py-8 flex justify-between m-auto mobil:flex-row flex-col mobil:text-start text-center gap-8">
+                    <div class="space-y-4 text-white">
+                        <h2 class="font-semibold uppercase text-[1.1em]">contact us</h2>
+                        <ul>
+                            <li><i class="fa-solid fa-phone text-[#01b3a7] text-[1.3em] mr-5"></i><a href="tel:" class="hover:text-[#01b3a7] trs">-1 323-913-4688</a></li>
+                            <li><i class="fa-solid fa-envelope text-[#01b3a7] text-[1.3em] mr-5 my-5"></i><a href="mailto:" class="hover:text-[#01b3a7] trs">info@demolink.org</a></li>
+                            <li><i class="fa-solid fa-location-arrow text-[#01b3a7] text-[1.3em] mr-5"></i><a href="#" class="hover:text-[#01b3a7] trs">4730 Crystal Springs Dr, <br> Los Angeles, CA 90027</a></li>
+                        </ul>
+                    </div>
+                    <div class="space-y-4">
+                        <h2 class="font-semibold text-white text-[1.1em]">POPULAR NEWS</h2>
+                        <div class="flex flex-col space-y-2">
+                            <a rel="noopener noreferrer" href="#" class="hover:text-[#50ba87] trs text-[#01b3a7]">Your Personal Guide to 5 Best <br> Places to Visit on Earth</a>
+                            <p class="font-bold text-[#7b7b7b] pb-3 text-sm">May 04, 2019</p>
+                            <a rel="noopener noreferrer" href="#" class="hover:text-[#50ba87] trs text-[#01b3a7]">Top 10 Hotels: Rating by <br> Wonder Tour Travel Experts</a>
+                            <p class="font-bold text-[#7b7b7b] pb-2 text-sm">May 04, 2019</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <h2 class="font-semibold text-white text-[1.1em]">QUICK LINKS</h2>
+                        <div class="space-y-2">
+                            <ul id="f-list" class="flex flex-wrap mobil:flex-col flex-row mobil:justify-stretch justify-center">
+                                <li class="mx-3"><a href="" class="text-white trs hover:text-[#01b3a7]">About us</a></li>
+                                <li class="mx-3"><a href="" class="text-white trs hover:text-[#01b3a7]">Our Tour</a></li>
+                                <li class="mx-3"><a href="" class="text-white trs hover:text-[#01b3a7]">Our Teams</a></li>
+                                <li class="mx-3"><a href="" class="text-white trs hover:text-[#01b3a7]">Gallery</a></li>
+                                <li class="mx-3"><a href="" class="text-white trs hover:text-[#01b3a7]">Blog</a></li>
+                            </ul>
+                        </div>
+                        <button class="bg-[#01b3a7] font-bold py-5 px-7 text-white trs hover:bg-[#50ba87]">Get in Touch</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom bg-[#11263a] py-8 text-[#7b7b7b]">
+                <div class="container m-auto items-center text-[14px] font-bold flex mobil:flex-row flex-col text-center gap-3 justify-between">
+                    <p>© 2024 Wonder Tour. All Rights Reserved. <br> Design by TemplateMonster</p>
+                    <div class="b-top flex gap-4 text-[18px]">
+                        <a href="" class="fa-brands fa-facebook-f hover:text-[#01b3a7] trs"></a>
+                        <a href="" class="fa-brands fa-twitter hover:text-[#01b3a7] trs"></a>
+                        <a href="" class="fa-brands fa-google-plus-g hover:text-[#01b3a7] trs"></a>
+                        <a href="" class="fa-brands fa-instagram hover:text-[#01b3a7] trs"></a>
+                    </div>
+                    <a href="#" class="hover:text-[#01b3a7] trs">Privacy Policy</a>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="myscript.js"></script>
+    </body>
+</html>

@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    border: 2px solid #01b3a7;
+    position: relative;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+.button:before {
+    transition: 0.2s all ease;
+    position: absolute;
+    top: 0;
+    left: 60%;
+    right: 60%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #50ba87;
+    z-index: -1;
+}
+.button:hover{color: #fff; border: 2px solid #50ba87;}
+.button:hover:before{
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+.swiper-wrapper, .swiper{z-index: 0 !important;}
+nav {
+    margin: auto;
+    box-shadow: 0 0 8px #e3e1e1;
+}
+.burgermenu{
+    transition: transform 0.5s ease;
+    box-shadow: 2px 0px 3px #e3e1e1;
+}
+.burgermenu.open{transform: translateX(0%)}
+.d-block{display: block;}
+.rotate {
+    transform: rotateX(180deg);
+    transition: transform 0.3s;
+}
+.swiper-pagination-bullet-active {background-color: #01b3a7 !important;}
+.swiper-pagination-bullet{
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 0 !important;
+}
+#arrow::after{
+    content: '→';
+    margin-left: 5px;
+}
+#arrow:hover:after{
+    content: '⟶';
+    font-size: 1.1em;
+    transition: 0.5s ease all;
+}
+.trs{transition: .4s;}
+.mySwiper2 .swiper-wrapper, .mySwiper3 .swiper-wrapper{padding-bottom: 50px}
+#f-list li::before,#typ-list li::before{
+    content: '⬤';
+    color: #01b3a7;
+    margin-right: 10px;
+}
+#typ-list li::before{color: #808080b4}
+.poliqon{
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    width: 110px;
+    height: 80px;
+    background-color: #01b3a7;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 32% 100%, 0 66%);
+}
+.bla:hover{
+    transition: all 1s;
+    background-size: 110%;
+}
+#box:hover i{
+    border-bottom: 2px solid #01b3a7;
+    padding-bottom: 20px;
+    background-size: 50% 50%;
+}
+#box-position{animation: bgAnimation 100s linear infinite;}
+@keyframes bgAnimation{
+    25% {transform: translate3d(-50px, -50px, 0) rotate(0.001deg);}
+    75% {transform: translate3d(0, 0, 0) rotate(0.001deg);}
+}
+#slide .fa-magnifying-glass-plus{
+    border: 1px solid white !important;
+    display: none;
+}
+#slide:hover .fa-magnifying-glass-plus{display: flex;}
+#slide:hover img{
+    filter: brightness(0.60);
+    scale: 1.2;
+}
+html {scroll-behavior: smooth;overflow-x: hidden;}

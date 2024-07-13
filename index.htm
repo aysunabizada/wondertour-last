@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WonderTour</title>
+        <link href="dist/hamburgers.css" rel="stylesheet">
+        <link href="css/output.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body class="font-['Montserrat'] overflow-hidden">
+        <a href="#" class="scroll-to-top bg-[#01b3a7] px-5 py-3 hidden hover:bg-black trs fixed right-6 bottom-6 z-[99999999]" onclick="scrollToTop()"><i class="fa-solid fa-chevron-up text-white"></i></a>
+        <header>
+            <a href="https://www.templatemonster.com/intense-multipurpose-html-template.html" id="banner" target="_blank" class="hidden mobil:block">
+                <img src="img/intense_02.jpg" alt="">
+            </a>
+            <nav>
+                <div id="nav-desk" class="desktop:block hidden">
+                    <div id="nav-top" class=" bg-white flex items-center justify-between py-5 container m-auto">
+                        <a href="index.htm"><img class="max-w-[240px]" src="img/logo-default-450x37.png" alt="WonderTour-Logo"></a>
+                        <div class="flex gap-10">
+                            <div class="clock flex items-center gap-6">
+                                <i class="fa-regular fa-clock text-[24px] text-[#01b3a7]"></i>
+                                <p class="tracking-wider text-[16px]">09:00 AM — 05:00 PM</p>
+                            </div>
+                            <div class="phone flex items-center gap-6">
+                                <i class="fa-solid fa-phone text-[24px] text-[#01b3a7]"></i>
+                                <a href="tel:+13239134688" class="tracking-wider text-[16px] hover:text-[#50ba87]">+1 323-913-4688</a>
+                            </div>
+                            <button class="tracking-wider text-[16px] button">Get a Free Quote</button>
+                        </div>
+                    </div>
+                    <div id="nav-bottom" class="text-[#fff] sticky top-0" style="background: #162e44;">
+                        <div class="container m-auto flex justify-between items-center">
+                            <ul class="flex gap-8 font-bold text-[17px]">
+                                <li class="bg-slate-600 tracking-widest border-t-4 border-[#01b3a7] trs p-5">
+                                    <a href="index.htm">Home</a>
+                                </li>
+                                <li class="tracking-widest hover:bg-slate-600 border-t-4 border-[#162e44] hover:border-[#01b3a7] trs p-5">
+                                    <a href="about.htm">About</a>
+                                </li>
+                                <li class="tracking-widest hover:bg-slate-600 border-t-4 border-[#162e44] hover:border-[#01b3a7] trs p-5">
+                                    <a href="typography.htm">Typography</a>
+                                </li>
+                                <li class="tracking-widest hover:bg-slate-600 border-t-4 border-[#162e44] hover:border-[#01b3a7] trs p-5">
+                                    <a href="contact.htm">Contact Us</a>
+                                </li>
+                            </ul>
+                            <div class="b-top flex gap-5 text-[20px]">
+                                <a href="" class="fa-brands fa-facebook-f hover:text-[#50ba87]"></a>
+                                <a href="" class="fa-brands fa-twitter hover:text-[#50ba87]"></a>
+                                <a href="" class="fa-brands fa-google-plus-g hover:text-[#50ba87]"></a>
+                                <a href="" class="fa-brands fa-instagram hover:text-[#50ba87]"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="nav-mobil" class="flex laptop:hidden py-6 px-4 bg-white container m-auto items-center justify-between">
+                    <div class="flex items-center">
+                        <div class="bars" onclick="openBurger()">
+                            <div class="hamburger hamburger--arrowturn" tabindex="0"
+                                aria-label="Menu" role="button" aria-controls="navigation">
+                                <div class="hamburger-box">
+                                    <div class="hamburger-inner"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="index.htm"><img class="w-[240px] px-5" src="img/logo-default-450x37.png" alt="WonderTour-Logo"></a>
+                    </div>
+                    <i onclick="openDropdown()" class="fa-solid fa-ellipsis-vertical text-[30px]"></i>
+                </div>
+            </nav>
+        </header>
+        <div class="dropdown w-[250px] hidden absolute z-[999] right-0">
+            <div class="flex gap-4 flex-col p-5 bg-white">
+                <div class="clock flex items-center gap-4">
+                    <i class="fa-regular fa-clock text-[20px] text-[#01b3a7]"></i>
+                    <p class="tracking-wider text-[14px]">09:00 AM — 05:00 PM</p>
+                </div>
+                <div class="phone flex items-center gap-4">
+                    <i class="fa-solid fa-phone text-[20px] text-[#01b3a7]"></i>
+                    <a href="tel:+13239134688" class="tracking-wider text-[14px] hover:text-[#50ba87]">+1 323-913-4688</a>
+                </div>
+                <button class="tracking-wider text-[14px] button">Get a Free Quote</button>
+            </div>
+        </div>
+        <div class="burgermenu w-[75%] h-[100vh] fixed left-0 z-[9999999] translate-x-[-150%] bg-white">
+            <div class="b-top flex gap-5 text-[18px] border-b-2 py-6 justify-center">
+                <a href="" class="fa-brands fa-facebook-f"></a>
+                <a href="" class="fa-brands fa-twitter"></a>
+                <a href="" class="fa-brands fa-google-plus-g"></a>
+                <a href="" class="fa-brands fa-instagram"></a>
+            </div>
+            <ul class="mt-4">
+                <li class="p-5 bg-[#01b3a7] text-[#fff]"><a href="index.htm">Home</a></li>
+                <li class="p-5 active:bg-[#01b3a7] active:text-[#fff]"><a href="about.htm">About</a></li>
+                <li class="p-5 active:bg-[#01b3a7] active:text-[#fff]"><a href="typography.htm">Typography</a></li>
+                <li class="p-5 active:bg-[#01b3a7] active:text-[#fff]"><a href="contact.htm">Contact us</a></li>
+            </ul>
+        </div>
+        <main>
+            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper1">
+                <div class="parallax-bg"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide text-white p-8 mobil:p-[10rem] pt-[5rem] " style="background: url('img/slider-4-slide-1-1920x678.jpg') center/cover; height: 75vh;">
+                        <div class="title uppercase mobil:text-[18px] text-[14px]" data-swiper-parallax="-300"  data-aos="fade-left" data-aos-duration="1000">enjoy the best destinations with our travel agency</div>
+                        <div class="subtitle  mobil:text-[4em] text-[2em] pb-2" data-swiper-parallax="-200" data-aos="fade-up" data-aos-duration="1000">Expolore <b>The World</b></div>
+                        <div class="text py-3" data-swiper-parallax="-100" data-aos="fade-right" data-aos-duration="1000"><button class="bg-transparent border-[#fff] border-2 p-4 trs hover:bg-[#50ba87] hover:border-[#50ba87]">Get in touch</button></div>
+                    </div>
+                    <div class="swiper-slide text-white p-8  mobil:p-[10rem] pt-[5rem]" style="background: url('img/slider-4-slide-2-1920x678.jpg') center/cover; height: 75vh;">
+                        <div class="title uppercase  mobil:text-[18px] text-[14px]" data-swiper-parallax="-300"  data-aos="fade-left" data-aos-duration="1000">a team of professional travel experts</div>
+                        <div class="subtitle  mobil:text-[4em] pb-2 text-[2em]" data-swiper-parallax="-200" data-aos="fade-up" data-aos-duration="1000">Trust <b>Our Experience</b></div>
+                        <div class="text py-3" data-swiper-parallax="-100" data-aos="fade-right" data-aos-duration="1000"><button class="bg-transparent border-2 p-4 border-white trs hover:bg-[#50ba87] hover:border-[#50ba87]">Get in touch</button></div>
+                    </div>
+                    <div class="swiper-slide text-white p-8  mobil:p-[10rem] pt-[5rem]" style="background: url('img/slider-4-slide-3-1920x678.jpg') center/cover; height: 75vh;">
+                        <div class="title uppercase mobil:text-[18px] text-[14px]" data-swiper-parallax="-300"  data-aos="fade-left" data-aos-duration="1000">build your next holiday trip with us</div>
+                        <div class="subtitle mobil:text-[4em] pb-2 text-[2em]" data-swiper-parallax="-200" data-aos="fade-up" data-aos-duration="1000">Create <b>Your Tour</b></div>
+                        <div class="text" data-swiper-parallax="-100" data-aos="fade-right" data-aos-duration="1000"><button class="bg-transparent border-2 p-4 border-white trs hover:bg-[#50ba87] hover:border-[#50ba87]">Get in touch</button></div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <section class=" bg-[#f7f7f7]">
+                <div id="tours-pic" data-aos="fade-down" data-aos-duration="1000" class="flex gap-8 mobil:flex-row desktop:p-9 p-8 flex-col justify-center bg-transparent mobil:mt-[-80px] mt-0">
+                    <a href="" class="block overflow-hidden relative">
+                        <img src="img/t1.jpg" alt="" class="hover:scale-110 trs">
+                        <h2 class="text-white text-[1.28em] font-bold py-5 absolute -translate-x-1/2 left-1/2 bottom-0">Balloon Flights</h2>
+                    </a>
+                    <a href="" class="block overflow-hidden relative">
+                        <img src="img/t2.jpg" alt="" class="hover:scale-110 trs">
+                        <h2 class="text-white text-[1.28em] font-bold py-5 absolute -translate-x-1/2 left-1/2 bottom-0">Mountain Holiday</h2>
+                    </a>
+                    <a href="" class="block overflow-hidden relative">
+                        <img src="img/t3.jpg" alt="" class="hover:scale-110 trs">
+                        <h2 class="text-white text-[1.28em] font-bold py-5 absolute -translate-x-1/2 left-1/2 bottom-0">Beach Holidays</h2>
+                    </a>
+                </div>
+                <a href="#" id="arrow" class=" block p-10 text-center font-bold text-[1.22em]">Other Tours</a>
+            </section> <br />
+            <section>
+                <div class="container m-auto flex mobil:flex-row flex-col gap-16 items-center py-16 px-8 mobil:text-start text-center">
+                    <div class="max-w-full" data-aos="fade-right" data-aos-duration="1000"><img src="img/discover-img.jpg" alt="discover-img" class="w-[560px]" /></div>
+                    <div class="content" data-aos="fade-left" data-aos-duration="1000">
+                        <h2 class="font-extrabold mobil:text-[2.5em] text-[1.5em] pb-5">Discover New Horizons</h2>
+                        <div class="flex mobil:flex-row flex-col text-center items-center gap-4">
+                            <span class="text-[#01b3a7] border-[#01b3a7] border-b-2 text-[1.2em] cursor-pointer mr-5 w-fit">ABOUT US</span>
+                            <span class="text-[#9B9B9B] border-[#acacac] border-b-2 text-[1.2em] cursor-pointer mr-5 w-fit">WHY CHOOSE US</span>
+                            <span class="text-[#9B9B9B] border-[#acacac] border-b-2 text-[1.2em] cursor-pointer mr-5 w-fit">OUR MISSION</span>
+                        </div>
+                        <p class="mobil:w-[500px] w-full py-4">Wonder Tour is committed to bringing our clients the best in value and quality travel arrangements. We are passionate about travel and sharing the world's wonders with you.</p>
+                        <div class="btns my-4 flex mobil:flex-row flex-col gap-5 items-center">
+                            <button class="w-fit border-[#01b3a7] trs hover:bg-white hover:text-black hover:border-black border-2 border-solid text-white bg-[#01b3a7] py-4 px-7 font-semibold">Get in Touch</button>
+                            <button class="w-fit border-[#000] trs hover:bg-[#01b3a7] hover:border-[#01b3a7] border-2 border-solid py-4 px-7 font-semibold">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </section> <br />
+            <section class="container m-auto">
+                <h2 class="font-bold text-[2.2em] text-center py-8">Our Services</h2>
+                <div class="flex justify-center flex-wrap gap-7 p-4">
+                    <a href="#" class="flex mobil:flex-row flex-col mobil:text-start text-center gap-3 max-w-sm px-9 py-11 bg-white border-8 border-[#f4f4f4] hover:border-[#fff] trs hover:shadow-2xl">
+                        <i class="fa-solid fa-sliders text-[#01b3a7] text-[2.5em] mt-[5px]"></i>
+                        <div>
+                            <h5 class="mb-3 text-[1.25em] font-semibold trs hover:text-[#01b3a7]">Personalized Matching</h5>
+                            <p class="font-normal text-gray-700 dark:text-gray-400">Our unique matching system lets you find just the tour you want for your next holiday.</p>
+                        </div>
+                    </a>
+                    <a href="#" class="flex mobil:flex-row flex-col mobil:text-start text-center gap-3 max-w-sm px-9 py-11 bg-white border-8 border-[#f4f4f4] hover:border-[#fff] trs hover:shadow-2xl">
+                        <i class="fa-solid fa-medal text-[#01b3a7] text-[2.5em] mt-[5px]"></i>
+                        <div>
+                            <h5 class="mb-3 text-[1.25em] font-semibold trs hover:text-[#01b3a7]">Wide Variety of Tours</h5>
+                            <p class="font-normal text-gray-700 dark:text-gray-400">We offer a wide variety of personally picked tours with destinations all over the globe.</p>
+                        </div>
+                    </a>
+                    <a href="#" class="flex mobil:flex-row flex-col mobil:text-start text-center gap-3 max-w-sm px-9 py-11 bg-white border-8 border-[#f4f4f4] hover:border-[#fff] trs hover:shadow-2xl">
+                        <i class="fa-regular fa-star text-[#01b3a7] text-[2.5em] mt-[5px]"></i>
+                        <div>
+                            <h5 class="mb-3 text-[1.25em] font-semibold trs hover:text-[#01b3a7]">Highly Qualified Service</h5>
+                            <p class="font-normal text-gray-700 dark:text-gray-400">Our tour managers are qualified, skilled, and friendly to bring you the best service</p>
+                        </div>
+                    </a>
+                    <a href="#" class="flex mobil:flex-row flex-col mobil:text-start text-center gap-3 max-w-sm px-9 py-11 bg-white border-8 border-[#f4f4f4] hover:border-[#fff] trs hover:shadow-2xl">
+                        <i class="fa-solid fa-headphones-simple text-[#01b3a7] text-[2.5em] mt-[5px]"></i>
+                        <div>
+                            <h5 class="mb-3 text-[1.25em] font-semibold trs hover:text-[#01b3a7]">24/7 Support</h5>
+                            <p class="font-normal text-gray-700 dark:text-gray-400">You can always get professional support from our staff 24/7 and ask any question you have.</p>
+                        </div>
+                    </a>
+                    <a href="#" class="flex mobil:flex-row flex-col mobil:text-start text-center gap-3 max-w-sm px-9 py-11 bg-white border-8 border-[#f4f4f4] hover:border-[#fff] trs hover:shadow-2xl">
+                        <i class="fa-solid fa-fire text-[#01b3a7] text-[2.5em] mt-[5px]"></i>
+                        <div>
+                            <h5 class="mb-3 text-[1.25em] font-semibold trs hover:text-[#01b3a7]">Handpicked Hotels</h5>
+                            <p class="font-normal text-gray-700 dark:text-gray-400">Our team offers only the best selection of affordable and luxury hotels to our clients.</p>
+                        </div>
+                    </a>
+                    <a href="#" class="flex mobil:flex-row flex-col mobil:text-start text-center gap-3 max-w-sm px-9 py-11 bg-white border-8 border-[#f4f4f4] hover:border-[#fff] trs hover:shadow-2xl">
+                        <i class="fa-solid fa-wallet text-[#01b3a7] text-[2.5em] mt-[5px]"></i>
+                        <div>
+                            <h5 class="mb-3 text-[1.25em] font-semibold trs hover:text-[#01b3a7]">Best Price Guarantee</h5>
+                            <p class="font-normal text-gray-700 dark:text-gray-400">If you find tours that are cheaper than ours, we will compensate the difference.</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <section>
+                <h2 class="font-bold text-[2.2em] text-center py-8">Hot Tours</h2>
+                <div data-aos="fade-left" data-aos-duration="1000" class="flex mobil:flex-row flex-col gap-8 my-5 justify-center m-auto items-center mobil:border-solid mobil:border relative mobil:border-[#c2c0c0] mobil:w-[70vw] w-[90vw]">
+                    <span class="poliqon text-white text-center pt-5 font-bold text-[1.5em]">$790</span>
+                    <a href="#" class="block w-[100%] overflow-hidden"><img src="img/tour1.jpg" alt="tour1-img" class="object-cover scale-125 hover:scale-110 trs"></a>
+                    <div class="content p-7">
+                        <a href="#"><h2 class="font-extrabold text-[1.5em] pb-5 hover:text-[#01b3a7] trs">Benidorm, Spain</h2></a>
+                        <div>
+                            <i class="fa-solid fa-star text-yellow-400"></i>
+                            <i class="fa-solid fa-star text-yellow-400"></i>
+                            <i class="fa-solid fa-star text-yellow-400"></i>
+                            <i class="fa-solid fa-star text-yellow-400"></i>
+                            <i class="fa-solid fa-star-half-stroke text-yellow-400"></i> 
+                            <span class="text-[#7b7b7b] text-sm ml-4"> 4 customer reviews</span>
+                        </div>
+                        <p class="mobil:w-[500px] w-[320px] py-4 text-[#acacac]">Benidorm is a buzzing resort with a big reputation for beach holidays. Situated in sunny Costa Blanca, the town is one of the original Spanish beach resorts...</p><br>
+                        <button class="border-[#000] trs hover:bg-[#01b3a7] hover:border-[#01b3a7] border-2 border-solid py-4 px-7 font-semibold">Buy This Tour</button>
+                    </div>
+                </div> <br>
+                <div data-aos="fade-right" data-aos-duration="1000" class="flex mobil:flex-row flex-col gap-8 my-5 justify-center m-auto items-center mobil:border-solid mobil:border relative mobil:border-[#c2c0c0]  mobil:w-[70vw] w-[90vw]">
+                    <span class="poliqon text-white text-center pt-5 font-bold text-[1.5em]">$890</span>
+                    <a href="#" class="block w-[100%] overflow-hidden"><img src="img/tour2.jpg" alt="tour2-img" class="object-cover scale-125 hover:scale-110 trs"></a>
+                    <div class="content p-7">
+                        <a href="#"><h2 class="font-extrabold text-[1.5em] pb-5 hover:text-[#01b3a7] trs">Mauritius Island, Africa</h2></a>
+                        <div>
+                            <i class="fa-solid fa-star text-yellow-400"></i>
+                            <i class="fa-solid fa-star text-yellow-400"></i>
+                            <i class="fa-solid fa-star text-yellow-400"></i>
+                            <i class="fa-solid fa-star text-yellow-400"></i>
+                            <i class="fa-solid fa-star-half-stroke text-yellow-400"></i> 
+                            <span class="text-[#7b7b7b] text-sm ml-4"> 5 customer reviews</span>
+                        </div>
+                        <p class="mobil:w-[500px] w-[320px] py-4 text-[#acacac]">The beautiful and inviting island nation of Mauritius is an ideal ‘flop and drop’ at the conclusion of your safari. Indulge in the delightful scents of the fragrant...</p> <br>
+                        <button class="border-[#000] trs hover:bg-[#01b3a7] hover:border-[#01b3a7] border-2 border-solid py-4 px-7 font-semibold">Buy This Tour</button>
+                    </div>
+                </div>
+            </section>
+            <div class="py-10">
+                <h2 data-aos="flip-up" data-aos-duration="1000" class="font-bold mobil:text-[2.2em] text-[1.5em] text-center py-8">Different People — One Mission</h2>
+                <div class="flex justify-center gap-8 mobil:flex-row flex-col py-8 items-center">
+                    <div class="w-[270px]">
+                        <div class="relative pt-[6rem]">
+                            <a href=""><img src="img/user-1.jpg" alt="users" class="rounded-[50%] trs border-white hover:translate-y-[-15px] border-4 hover:border-[#01b3a7] absolute bottom-[30px] right-[74px]" /></a>
+                            <svg x="0px" y="0px" width="270px" height="70px" viewBox="0 0 270 70" enable-background="new 0 0 270 70" xml:space="preserve">
+                                <g><path class="fill-[#f7f7f7]" fill="#161616" d="M202.085,0C193.477,28.912,166.708,50,135,50S76.523,28.912,67.915,0H0v70h270V0H202.085z"></path></g>
+                            </svg>
+                        </div>
+                        <div class="py-6 text-center bg-[#f7f7f7]">
+                            <a href="#" class="hover:text-[#01b3a7] trs font-bold text-[1.2em]">Diana Robinson</a>
+                            <p class="text-[#01b3a7] py-2">Founder, Owner</p>
+                            <a href="tel:#" class="hover:text-[#01b3a7] trs font-semibold text-[1.2em]">+1 323-913-4688</a> <br><br>
+                        </div>
+                    </div>
+                    <div class="w-[270px]">
+                        <div class="relative pt-[6rem]">
+                            <a href=""><img src="img/user-2.jpg" alt="users" class="rounded-[50%] trs border-white hover:translate-y-[-15px] border-4 hover:border-[#01b3a7] absolute bottom-[30px] right-[74px]" /></a>
+                            <svg x="0px" y="0px" width="270px" height="70px" viewBox="0 0 270 70" enable-background="new 0 0 270 70" xml:space="preserve">
+                                <g><path class="fill-[#f7f7f7]" fill="#161616" d="M202.085,0C193.477,28.912,166.708,50,135,50S76.523,28.912,67.915,0H0v70h270V0H202.085z"></path></g>
+                            </svg>
+                        </div>
+                        <div class="py-6 text-center bg-[#f7f7f7]">
+                            <a href="#" class="hover:text-[#01b3a7] trs font-bold text-[1.2em]">Peter McMillan</a>
+                            <p class="text-[#01b3a7] py-2">Travel Agent</p>
+                            <a href="tel:#" class="hover:text-[#01b3a7] trs font-semibold text-[1.2em]">+1 326-918-4688</a> <br><br>
+                        </div>
+                    </div>
+                    <div class="w-[270px]">
+                        <div class="relative pt-[6rem]">
+                            <a href=""><img src="img/user-3.jpg" alt="users" class="rounded-[50%] trs border-white hover:translate-y-[-15px] border-4 hover:border-[#01b3a7] absolute bottom-[30px] right-[74px]" /></a>
+                            <svg x="0px" y="0px" width="270px" height="70px" viewBox="0 0 270 70" enable-background="new 0 0 270 70" xml:space="preserve">
+                                <g><path class="fill-[#f7f7f7]" fill="#161616" d="M202.085,0C193.477,28.912,166.708,50,135,50S76.523,28.912,67.915,0H0v70h270V0H202.085z"></path></g>
+                            </svg>
+                        </div>
+                        <div class="py-6 text-center bg-[#f7f7f7]">
+                            <a href="#" class="hover:text-[#01b3a7] trs font-bold text-[1.2em]">Jill Peterson</a>
+                            <p class="text-[#01b3a7] py-2">Tour Consultant</p>
+                            <a href="tel:#" class="hover:text-[#01b3a7] trs font-semibold text-[1.2em]">+1 326-918-4688</a> <br><br>
+                        </div>
+                    </div>
+                    <div class="w-[270px]">
+                        <div class="relative pt-[6rem]">
+                            <a href=""><img src="img/user-4.jpg" alt="users" class="rounded-[50%] trs border-white hover:translate-y-[-15px] border-4 hover:border-[#01b3a7] absolute bottom-[30px] right-[74px]" /></a>
+                            <svg x="0px" y="0px" width="270px" height="70px" viewBox="0 0 270 70" enable-background="new 0 0 270 70" xml:space="preserve">
+                                <g><path class="fill-[#f7f7f7]" fill="#161616" d="M202.085,0C193.477,28.912,166.708,50,135,50S76.523,28.912,67.915,0H0v70h270V0H202.085z"></path></g>
+                            </svg>
+                        </div>
+                        <div class="py-6 text-center bg-[#f7f7f7]">
+                            <a href="#" class="hover:text-[#01b3a7] trs font-bold text-[1.2em]">James Smith</a>
+                            <p class="text-[#01b3a7] py-2">PR Manager</p>
+                            <a href="tel:#" class="hover:text-[#01b3a7] trs font-semibold text-[1.2em]">+1 326-918-4688</a> <br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section style="background: url('img/parallax-1-1920x850.jpg')50%/cover fixed;" class="py-8">
+                <div class="content text-center text-white py-16">
+                    <h2 class="mobil:text-[3em] text-[2em] px-5">First-class Impressions <br> are Waiting for You!</h2>
+                    <p class="text-center m-auto py-5" data-aos="fade-right" data-aos-duration="1000">Our agency offers travelers various tours and excursions with destinations <br> all over the world. Browse our website to find your dream tour!</p>
+                    <button class="bg-[#01b3a7] text-white hover:border-[#fff] trs hover:bg-transparent hover:border-2 hover:border-solid py-4 px-7 font-semibold">Book a Tour Now</button>
+                </div>
+            </section>
+            <section class="py-9">
+                <h2 class="font-bold text-center pb-9">Gallery</h2>
+                <div class="swiper mySwiper2 py-9 m-auto">
+                    <div class="swiper-wrapper mobil:ml-6 ml-0">
+                        <div class="swiper-slide overflow-hidden cursor-pointer" id="slide">
+                            <img src="img/g2.jpg" alt="" class="fullscreen-image mobil:w-[300px] w-full mobil:p-0 p-5 scale-150 hover:scale-125 trs relative" />
+                            <i class="fa-solid fa-magnifying-glass-plus text-[2.5em] absolute text-white -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-[280px] justify-center items-center text-center h-[170px]"></i>
+                        </div>
+                        <div class="swiper-slide overflow-hidden cursor-pointer" id="slide">
+                            <img src="img/g1.jpg" alt="" class="fullscreen-image mobil:w-[300px] w-full mobil:p-0 p-5 scale-150 hover:scale-125 trs" />
+                            <i class="fa-solid fa-magnifying-glass-plus text-[2.5em] absolute text-white -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-[280px] justify-center items-center text-center h-[170px] "></i>
+                        </div>
+                        <div class="swiper-slide overflow-hidden cursor-pointer" id="slide">
+                            <img src="img/g3.jpg" alt="" class="fullscreen-image mobil:w-[300px] w-full mobil:p-0 p-5 scale-150 hover:scale-125 trs" />
+                            <i class="fa-solid fa-magnifying-glass-plus text-[2.5em] absolute text-white -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-[280px] justify-center items-center text-center h-[170px] "></i>
+                        </div>
+                        <div class="swiper-slide overflow-hidden cursor-pointer" id="slide">
+                            <img src="img/g4.jpg" alt="" class="fullscreen-image mobil:w-[300px] w-full mobil:p-0 p-5 scale-150 hover:scale-125 trs" />
+                            <i class="fa-solid fa-magnifying-glass-plus text-[2.5em] absolute text-white -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-[280px] justify-center items-center text-center h-[170px] "></i>
+                        </div>
+                        <div class="swiper-slide overflow-hidden cursor-pointer" id="slide">
+                            <img src="img/g5.jpg" alt="" class="fullscreen-image mobil:w-[300px] w-full mobil:p-0 p-5 scale-150 hover:scale-125 trs" />
+                            <i class="fa-solid fa-magnifying-glass-plus text-[2.5em] absolute text-white -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-[280px] justify-center items-center text-center h-[170px] "></i>
+                        </div>
+                        <div class="swiper-slide overflow-hidden cursor-pointer" id="slide">
+                            <img src="img/g6.jpg" alt="" class="fullscreen-image mobil:w-[300px] w-full mobil:p-0 p-5 scale-150 hover:scale-125 trs" />
+                            <i class="fa-solid fa-magnifying-glass-plus text-[2.5em] absolute text-white -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-[280px] justify-center items-center text-center h-[170px] "></i>
+                        </div>
+                        <div class="swiper-slide overflow-hidden cursor-pointer" id="slide">
+                            <img src="img/g7.jpg" alt="" class="fullscreen-image mobil:w-[300px] w-full mobil:p-0 p-5 scale-150 hover:scale-125 trs" />
+                            <i class="fa-solid fa-magnifying-glass-plus text-[2.5em] absolute text-white -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-[280px] justify-center items-center text-center h-[170px] "></i>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination" id="sp2"></div>
+                </div>
+            </section>
+            <a href="https://www.templatemonster.com/intense-multipurpose-html-template.html" id="banner" target="_blank">
+                <img src="img/intense_big_02 (1).jpg" class="max-w-full" alt="banner" />
+            </a>
+        </main>
+        <footer>
+            <div class="footer-top bg-[#162D43] py-8">
+                <div class="container py-8 flex justify-between m-auto mobil:flex-row flex-col mobil:text-start text-center gap-8">
+                    <div class="space-y-4 text-white" data-aos="fade-left" data-aos-duration="1000">
+                        <h2 class="font-semibold uppercase text-[1.1em]">contact us</h2>
+                        <ul>
+                            <li><i class="fa-solid fa-phone text-[#01b3a7] text-[1.3em] mr-5"></i><a href="tel:" class="hover:text-[#01b3a7] trs">-1 323-913-4688</a></li>
+                            <li><i class="fa-solid fa-envelope text-[#01b3a7] text-[1.3em] mr-5 my-5"></i><a href="mailto:" class="hover:text-[#01b3a7] trs">info@demolink.org</a></li>
+                            <li><i class="fa-solid fa-location-arrow text-[#01b3a7] text-[1.3em] mr-5"></i><a href="#" class="hover:text-[#01b3a7] trs">4730 Crystal Springs Dr, <br> Los Angeles, CA 90027</a></li>
+                        </ul>
+                    </div>
+                    <div class="space-y-4" data-aos="fade-up" data-aos-duration="1000">
+                        <h2 class="font-semibold text-white text-[1.1em]">POPULAR NEWS</h2>
+                        <div class="flex flex-col space-y-2">
+                            <a rel="noopener noreferrer" href="#" class="hover:text-[#50ba87] trs text-[#01b3a7]">Your Personal Guide to 5 Best <br> Places to Visit on Earth</a>
+                            <p class="font-bold text-[#7b7b7b] pb-3 text-sm">May 04, 2019</p>
+                            <a rel="noopener noreferrer" href="#" class="hover:text-[#50ba87] trs text-[#01b3a7]">Top 10 Hotels: Rating by <br> Wonder Tour Travel Experts</a>
+                            <p class="font-bold text-[#7b7b7b] pb-2 text-sm">May 04, 2019</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4" data-aos="fade-right" data-aos-duration="1000">
+                        <h2 class="font-semibold text-white text-[1.1em]">QUICK LINKS</h2>
+                        <div class="space-y-2">
+                            <ul id="f-list" class="flex flex-wrap mobil:flex-col flex-row mobil:justify-stretch justify-center">
+                                <li class="mx-3"><a href="" class="text-white trs hover:text-[#01b3a7]">About us</a></li>
+                                <li class="mx-3"><a href="" class="text-white trs hover:text-[#01b3a7]">Our Tour</a></li>
+                                <li class="mx-3"><a href="" class="text-white trs hover:text-[#01b3a7]">Our Teams</a></li>
+                                <li class="mx-3"><a href="" class="text-white trs hover:text-[#01b3a7]">Gallery</a></li>
+                                <li class="mx-3"><a href="" class="text-white trs hover:text-[#01b3a7]">Blog</a></li>
+                            </ul>
+                        </div>
+                        <button class="bg-[#01b3a7] font-bold py-5 px-7 text-white trs hover:bg-[#50ba87]">Get in Touch</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom bg-[#11263a] py-8 text-[#7b7b7b]">
+                <div class="container m-auto items-center text-[14px] font-bold flex mobil:flex-row flex-col text-center gap-3 justify-between">
+                    <p>© 2024 Wonder Tour. All Rights Reserved. <br> Design by TemplateMonster</p>
+                    <div class="b-top flex gap-4 text-[18px]">
+                        <a href="" class="fa-brands fa-facebook-f hover:text-[#01b3a7] trs"></a>
+                        <a href="" class="fa-brands fa-twitter hover:text-[#01b3a7] trs"></a>
+                        <a href="" class="fa-brands fa-google-plus-g hover:text-[#01b3a7] trs"></a>
+                        <a href="" class="fa-brands fa-instagram hover:text-[#01b3a7] trs"></a>
+                    </div>
+                    <a href="#" class="hover:text-[#01b3a7] trs">Privacy Policy</a>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>AOS.init();</script>
+        <script src="myscript.js"></script>
+        <script>
+            var swiper1 = new Swiper(".mySwiper1", {
+                slidesPerView: 'auto',
+                breakpoints :{
+                    768:{
+                        sliderPerView: 1.3
+                    }
+                },
+                // direction: "vertical",
+                centeredSlides: true,
+                spaceBetween: 30,
+                Loop: true,
+                autoplay: {
+                    delay: 4000, 
+                    disableOnInteraction: false, 
+                    },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                parallax: true,
+            });
+
+            var swiper2 = new Swiper(".mySwiper2", {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 3.5,
+                        spaceBetween: 40,
+                    },
+                    1024: {
+                        slidesPerView: 5,
+                        spaceBetween: 30,
+                    },
+                },
+                Loop: true,
+                autoplay: {
+                    delay: 4000, 
+                    disableOnInteraction: false, 
+                },
+            });
+        </script>
+    </body>
+</html>
